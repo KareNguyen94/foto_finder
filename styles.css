@@ -1,0 +1,144 @@
+* {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0px;
+  padding: 0px;
+  border: 1px solid red;
+}
+
+body {
+  background-color: #C2B2B4;
+}
+
+header {
+  background-color: #3E2A35;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 3%;
+}
+
+h1 {
+  font-size: 300%;
+  color: #FFFFFF;
+  margin-left: 2%;
+}
+
+.foto-logo {
+  width: 10%;
+}
+
+.search-heading {
+  display: flex;
+  background-color: #3E2A35;
+  width: 35%;
+  margin-right: 2%;
+}
+
+.search-input {
+  font-size: 90%;
+  padding:2%;
+  width: 100%;
+  border: 2px solid #C2B2B4;
+  border-radius: 5px 0px 0px 5px;
+}
+
+.search-icon {
+  fill: #C2B2B4;
+  height: 30px;
+  width: 40px;
+}
+
+.search-button {
+  width: 55px;
+  height: 45px;
+  border: 0;
+  background-color: #C2B2B4;
+  border-radius: 0px 5px 5px 0px;
+}
+
+.main-inputs {
+  background-color: #3E2A35;
+  display: flex;
+  flex-direction: column;
+}
+
+form {
+  margin-left: 30%;
+  align-items: center;
+}
+
+.title-input {
+  font-size: 230%;
+  width: 50%;
+  margin-bottom: 2%;
+}
+
+.caption-input {
+  font-size: 230%;
+  width: 50%;
+  margin-bottom: 4%;
+}
+
+label {
+  font-size: 16px;
+  color: #C2B2B4;
+  display: flex;
+  align-items: flex-start;
+}
+
+.choose-file {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+  z-index: -1;
+}
+
+.add-to-album-button {
+  color: #FFFFFF;
+  width: 50%;
+  font-size: 90%;
+  padding: 1.5%;
+  margin-bottom: 4%;
+  background-color: #5B4447;
+}
+
+.choose-file + label {
+  color: #FFFFFF;
+  width: 47%;
+  font-size: 90%;
+  padding: 1.5%;
+  margin-bottom: 4%;
+  background-color: #5B4447;
+}
+
+.choose-file:focus + label {
+	outline: 1px dotted #000;
+	outline: -webkit-focus-ring-color auto 5px;
+}
+
+.file-label {
+  align-items: center;
+}
+
+.img-card {
+  border: 1px solid #3E2A35;
+  width: 20%;
+  color: #3E2A35;
+  display: flex;
+  flex-direction: column;
+}
+
+.img-footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: #3E2A35;
+}
+
+.trash-icon,
+.heart-icon {
+  width: 35px;
+  height: 35px;
+  padding: 5%;
+}
