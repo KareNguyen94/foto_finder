@@ -79,7 +79,8 @@ form {
   margin-bottom: 4%;
 }
 
-label {
+.caption-label,
+.title-label {
   font-size: 16px;
   color: #C2B2B4;
   display: flex;
@@ -119,7 +120,10 @@ label {
 }
 
 .file-label {
-  align-items: center;
+  font-size: 16px;
+  color: #C2B2B4;
+  display: flex;
+  justify-content: center;
 }
 
 .img-card {
