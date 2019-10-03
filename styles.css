@@ -2,7 +2,7 @@
   font-family: 'Open Sans', sans-serif;
   margin: 0px;
   padding: 0px;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 body {
@@ -67,18 +67,15 @@ form {
   align-items: center;
 }
 
-.title-input {
+.title-input,
+.url-input,
+.caption-input {
   font-size: 230%;
   width: 50%;
   margin-bottom: 2%;
 }
 
-.caption-input {
-  font-size: 230%;
-  width: 50%;
-  margin-bottom: 4%;
-}
-
+.url-label,
 .caption-label,
 .title-label {
   font-size: 16px;
@@ -87,34 +84,35 @@ form {
   align-items: flex-start;
 }
 
-.choose-file {
+/* .choose-file {
 	width: 0.1px;
 	height: 0.1px;
 	opacity: 0;
 	overflow: hidden;
 	position: absolute;
   z-index: -1;
-}
+} */
 
 .add-to-album-button {
   color: #FFFFFF;
   width: 50%;
   font-size: 90%;
   padding: 1.5%;
-  margin-bottom: 4%;
+  margin-top: 2%;
+  margin-bottom: 5%;
   background-color: #5B4447;
 }
 
-.choose-file + label {
+/* .choose-file + label {
   color: #FFFFFF;
   width: 47%;
   font-size: 90%;
   padding: 1.5%;
   margin-bottom: 4%;
   background-color: #5B4447;
-}
+} */
 
-.choose-file:focus + label {
+/* .choose-file:focus + label {
 	outline: 1px dotted #000;
 	outline: -webkit-focus-ring-color auto 5px;
 }
@@ -124,25 +122,46 @@ form {
   color: #C2B2B4;
   display: flex;
   justify-content: center;
+} */
+
+#main-empty {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
 }
 
 .img-card {
   border: 1px solid #3E2A35;
   width: 20%;
-  color: #3E2A35;
+  color: #5B4447;
   display: flex;
   flex-direction: column;
+  background-color: #FFFFFF;
+  word-wrap: break-word;
+  font-size: 20px;
+  justify-content: space-between;
+  border-bottom: 1px solid #5B4447;
+  margin: 3% 2%;
 }
 
 .img-footer {
   display: flex;
   justify-content: space-between;
-  background-color: #3E2A35;
+  background-color: #5B4447;
 }
 
 .trash-icon,
 .heart-icon {
-  width: 35px;
-  height: 35px;
-  padding: 5%;
+  width: 27px;
+  height: 27px;
+  padding: 3%;
+}
+
+a:link {
+  color: purple;
+}
+
+#image {
+  width: 100%;
+  border: 1px solid #3E2A35;
 }

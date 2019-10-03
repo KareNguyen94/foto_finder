@@ -1,21 +1,21 @@
 class Photo {
-  constructor(title, caption) {
+  constructor(title, url, caption) {
     this.id = Date.now();
     this.title = title;
+    this.url = url;
     this.caption = caption;
-    this.file = file;
     this.favorite = false;
   }
 
-  saveToStorage() {
-
-  }
-
-  deleteFromStorage() {
-
-  }
+  // saveToStorage(array) {
+  //   localStorage.setItem()
+  // }
+  //
+  // deleteFromStorage(key) {
+  //   localStorage.removeItem(key)
+  // }
 
   updatePhoto() {
-
+    this.favorite = !this.favorite;
   }
 }
