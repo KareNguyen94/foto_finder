@@ -7,10 +7,10 @@ class Photo {
     this.favorite = false;
   }
 
-  // saveToStorage(array) {
-  //   localStorage.setItem()
-  // }
-  //
+  saveToStorage(array) {
+    localStorage.setItem("photoCard", JSON.stringify(array))
+  }
+
   // deleteFromStorage(key) {
   //   localStorage.removeItem(key)
   // }
