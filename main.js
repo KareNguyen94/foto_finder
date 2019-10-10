@@ -46,13 +46,14 @@ function parseLocalStorage() {
 function reInstantiation() {
   var storageArray = parseLocalStorage();
     for (var i = 0; i < storageArray.length; i++) {
-      instantiatePhoto(storageArray[i].title, storageArray[i].url, storageArray[i].caption);
+      instantiatePhoto(storageArray[i].title, storageArray[i].url, storageArray[i].caption, storageArray[i].favorite);
+      checkFavorite(storageArray[i]);
     }
 }
 
 
-function instantiatePhoto(title, url, caption) {
-  var photo = new Photo(title, url, caption);
+function instantiatePhoto(title, url, caption, favorite) {
+  var photo = new Photo(title, url, caption, favorite);
   photoArray.push(photo);
   createCard(photo);
   photo.saveToStorage(photoArray);
@@ -67,12 +68,15 @@ function createCard(newPhoto) {
       <p id="caption-title" class="img-caption">${newPhoto.caption}</p>
       <div class="img-footer">
         <img id="remove-card" class="trash-icon" src="assets/delete.svg" alt="Trashcan icon">
-        <img id="favorite-card" class="heart-icon" src="assets/favorite.svg" alt="Heart icon">
+        <img id="favorite-card" class="heart-icon heart-${newPhoto.favorite}" src="assets/favorite.svg" alt="Heart icon">
       </div>
     </div>
   <section>`
     parentContainer.insertAdjacentHTML("beforeEnd", photoCardHtml);
 }
+
+// in favorite asign class="heart-${this.favorite}"
+// heart true active favorite/ heart false not favorite
 
 function deletePhoto(event) {
    event.target.closest("section").remove();
@@ -91,10 +95,19 @@ function findIndexOfPhoto(event) {
 function styleHeartIcon(event) {
   var hiddenObj = findIndexOfPhoto(event);
     hiddenObj.updatePhoto();
+    checkFavorite(hiddenObj)
     if (hiddenObj.favorite) {
       event.target.src = "assets/favorite-active.svg";
     } else {
        event.target.src = "assets/favorite.svg";
       }
      hiddenObj.saveToStorage(photoArray);
+}
+
+function checkFavorite(hiddenObj) {
+  if (hiddenObj.favorite) {
+    event.target.src = "assets/favorite-active.svg";
+  } else {
+     event.target.src = "assets/favorite.svg";
+    }
 }
